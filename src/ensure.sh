@@ -10,7 +10,7 @@ ensure::env_var_exists(){
 ensure::total_args(){
     local -r number_args=$(( $# -1 ))
     local -r assert_args=$1
-    if [[ $number_args != $assert_args]];then
+    if [[ $number_args != $assert_args ]];then
         echoerr "Illegal number of parameters, $assert_args expected but $number_args found"
         exit 1
     fi
