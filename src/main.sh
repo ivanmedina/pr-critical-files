@@ -9,7 +9,7 @@ main(){
     ensure::env_var_exists "GITHUB_EVENT_PATH"
     ensure::total_args 3 "$@"
     export GITHUB_TOKEN="$1"
-    ensure::check "$2" "$3"
+    checker::check "$2" "$3"
     exit $?
 
 }
