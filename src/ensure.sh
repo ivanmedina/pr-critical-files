@@ -1,7 +1,7 @@
 #!/bin/usr/env bash
 
 ensure::env_var_exists(){
-    if [[ -z "${$1}" ]];then
+    if [[ -z "${1}" ]];then
         echoerr "The env variable $1 is required"
         exit 1
     fi
