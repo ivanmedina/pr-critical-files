@@ -1,0 +1,23 @@
+name: 'Check critical files'
+description: 'Action that check if critical fil is modified'
+branding:
+  icon: 'alert-circle'
+  color: 'gray-dark'
+inputs:
+  GITHUB_TOKEN:
+    description: 'Github Token'
+    required: true
+  critical_files:
+    descritpion: 'A newline separated list of critical files'
+    required: true
+  critical_message:
+    description: 'message displayed when critical files are modified'
+    required: false
+    default: 'Caution! you have commited some critical files'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.GITHUB_TOKEN }}
+    - ${{ inputs.critical_files  }}
+    - ${{ inputs.critical_message  }}
