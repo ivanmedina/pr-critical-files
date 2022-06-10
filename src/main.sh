@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-source "$CHECK_CRITICAL_HOME/src/ensure.sh"
 source "$CHECK_CRITICAL_HOME/src/checker.sh"
+source "$CHECK_CRITICAL_HOME/src/ensure.sh"
+source "$CHECK_CRITICAL_HOME/src/github.sh"
+source "$CHECK_CRITICAL_HOME/src/github_actions.sh"
+source "$CHECK_CRITICAL_HOME/src/misc.sh"
 
 main(){
 
